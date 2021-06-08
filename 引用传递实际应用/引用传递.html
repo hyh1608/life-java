@@ -1,0 +1,1216 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>引用传递实际应用 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../数据表与简单java类映射转换/" />
+    
+    
+    <link rel="prev" href="../数组的定义与使用/对象数组.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../类与对象/类与对象的定义及使用.html">
+            
+                <a href="../类与对象/类与对象的定义及使用.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../类与对象/类与对象的定义及使用.html">
+            
+                <a href="../类与对象/类与对象的定义及使用.html">
+            
+                    
+                    类与对象的定义及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../类与对象/对象内存分析.html">
+            
+                <a href="../类与对象/对象内存分析.html">
+            
+                    
+                    对象内存分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../类与对象/对象引用分析.html">
+            
+                <a href="../类与对象/对象引用分析.html">
+            
+                    
+                    对象引用分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../类与对象/引用与垃圾产生分析.html">
+            
+                <a href="../类与对象/引用与垃圾产生分析.html">
+            
+                    
+                    引用与垃圾产生分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../类与对象/深入分析类与对象.html">
+            
+                <a href="../类与对象/深入分析类与对象.html">
+            
+                    
+                    深入分析类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../this关键字/this调用本类属性.html">
+            
+                <a href="../this关键字/this调用本类属性.html">
+            
+                    
+                    this关键字
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../this关键字/this调用本类属性.html">
+            
+                <a href="../this关键字/this调用本类属性.html">
+            
+                    
+                    this调用本类属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../this关键字/this调用本类方法.html">
+            
+                <a href="../this关键字/this调用本类方法.html">
+            
+                    
+                    this调用本类方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../this关键字/综合案例：简单java类.html">
+            
+                <a href="../this关键字/综合案例：简单java类.html">
+            
+                    
+                    综合案例：简单java类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../static关键字/声明static属性.html">
+            
+                <a href="../static关键字/声明static属性.html">
+            
+                    
+                    static关键字
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../static关键字/声明static属性.html">
+            
+                <a href="../static关键字/声明static属性.html">
+            
+                    
+                    声明static属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../static关键字/声明static方法.html">
+            
+                <a href="../static关键字/声明static方法.html">
+            
+                    
+                    声明static方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../static关键字/static应用案例.html">
+            
+                <a href="../static关键字/static应用案例.html">
+            
+                    
+                    static应用案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../代码块/普通代码块.html">
+            
+                <a href="../代码块/普通代码块.html">
+            
+                    
+                    代码块
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../代码块/普通代码块.html">
+            
+                <a href="../代码块/普通代码块.html">
+            
+                    
+                    普通代码块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../代码块/构造代码块.html">
+            
+                <a href="../代码块/构造代码块.html">
+            
+                    
+                    构造代码块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../代码块/静态代码块.html">
+            
+                <a href="../代码块/静态代码块.html">
+            
+                    
+                    静态代码块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../面向对象案例分析/案例分析.html">
+            
+                <a href="../面向对象案例分析/案例分析.html">
+            
+                    
+                    面向对象案例分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../数组的定义与使用/">
+            
+                <a href="../数组的定义与使用/">
+            
+                    
+                    数组的定义与使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../数组的定义与使用/数组引用传递分析.html">
+            
+                <a href="../数组的定义与使用/数组引用传递分析.html">
+            
+                    
+                    数组引用传递分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../数组的定义与使用/foreach输出.html">
+            
+                <a href="../数组的定义与使用/foreach输出.html">
+            
+                    
+                    foreach输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../数组的定义与使用/二维数组.html">
+            
+                <a href="../数组的定义与使用/二维数组.html">
+            
+                    
+                    二维数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../数组的定义与使用/数组与方法.html">
+            
+                <a href="../数组的定义与使用/数组与方法.html">
+            
+                    
+                    数组与方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../数组的定义与使用/数组排序案例分析.html">
+            
+                <a href="../数组的定义与使用/数组排序案例分析.html">
+            
+                    
+                    数组排序案例分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../数组的定义与使用/数组转置案例分析.html">
+            
+                <a href="../数组的定义与使用/数组转置案例分析.html">
+            
+                    
+                    数组转置案例分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../数组的定义与使用/数组相关类库.html">
+            
+                <a href="../数组的定义与使用/数组相关类库.html">
+            
+                    
+                    数组相关类库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../数组的定义与使用/方法可变参数.html">
+            
+                <a href="../数组的定义与使用/方法可变参数.html">
+            
+                    
+                    方法可变参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../数组的定义与使用/对象数组.html">
+            
+                <a href="../数组的定义与使用/对象数组.html">
+            
+                    
+                    对象数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="引用传递.html">
+            
+                <a href="引用传递.html">
+            
+                    
+                    引用传递实际应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../数据表与简单java类映射转换/">
+            
+                <a href="../数据表与简单java类映射转换/">
+            
+                    
+                    数据表与简单java类映射转换
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../数据表与简单java类映射转换/简单映射与复杂映射.html">
+            
+                <a href="../数据表与简单java类映射转换/简单映射与复杂映射.html">
+            
+                    
+                    简单映射与复杂映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../String类/">
+            
+                <a href="../String类/">
+            
+                    
+                    String类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../String类/String类特点分析.html">
+            
+                <a href="../String类/String类特点分析.html">
+            
+                    
+                    String类特点分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../String类/String类常用方法.html">
+            
+                <a href="../String类/String类常用方法.html">
+            
+                    
+                    String类常用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../继承与覆写/继承.html">
+            
+                <a href="../继承与覆写/继承.html">
+            
+                    
+                    继承与覆写
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../继承与覆写/继承.html">
+            
+                <a href="../继承与覆写/继承.html">
+            
+                    
+                    继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../继承与覆写/覆写.html">
+            
+                <a href="../继承与覆写/覆写.html">
+            
+                    
+                    覆写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../继承与覆写/继承分析.html">
+            
+                <a href="../继承与覆写/继承分析.html">
+            
+                    
+                    继承分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Annotation注解/常用注解介绍.html">
+            
+                <a href="../Annotation注解/常用注解介绍.html">
+            
+                    
+                    Annotation注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../多态性/多态性.html">
+            
+                <a href="../多态性/多态性.html">
+            
+                    
+                    多态性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../Object类/Object类.html">
+            
+                <a href="../Object类/Object类.html">
+            
+                    
+                    Object类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../抽象类/抽象类.html">
+            
+                <a href="../抽象类/抽象类.html">
+            
+                    
+                    抽象类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../包装类/包装类.html">
+            
+                <a href="../包装类/包装类.html">
+            
+                    
+                    包装类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../接口/接口的定义与使用.html">
+            
+                <a href="../接口/接口的定义与使用.html">
+            
+                    
+                    接口
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../接口/接口的定义与使用.html">
+            
+                <a href="../接口/接口的定义与使用.html">
+            
+                    
+                    接口的定义与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../接口/工厂与代理设计模式.html">
+            
+                <a href="../接口/工厂与代理设计模式.html">
+            
+                    
+                    工厂与代理设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../接口/抽象类与接口应用.html">
+            
+                <a href="../接口/抽象类与接口应用.html">
+            
+                    
+                    抽象类与接口应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../泛型/泛型.html">
+            
+                <a href="../泛型/泛型.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../包的定义及使用/包的定义及导入.html">
+            
+                <a href="../包的定义及使用/包的定义及导入.html">
+            
+                    
+                    包的定义及使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="../包的定义及使用/包的定义及导入.html">
+            
+                <a href="../包的定义及使用/包的定义及导入.html">
+            
+                    
+                    包的定义及导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2" data-path="../包的定义及使用/包的使用.html">
+            
+                <a href="../包的定义及使用/包的使用.html">
+            
+                    
+                    包的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../单例与多例设计模式/单例与多例设计模式.html">
+            
+                <a href="../单例与多例设计模式/单例与多例设计模式.html">
+            
+                    
+                    单例与多例设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../枚举/枚举.html">
+            
+                <a href="../枚举/枚举.html">
+            
+                    
+                    枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../异常/异常处理.html">
+            
+                <a href="../异常/异常处理.html">
+            
+                    
+                    异常
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.22.1" data-path="../异常/异常处理.html">
+            
+                <a href="../异常/异常处理.html">
+            
+                    
+                    异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.2" data-path="../异常/异常关键字.html">
+            
+                <a href="../异常/异常关键字.html">
+            
+                    
+                    异常关键字
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../内部类/内部类.html">
+            
+                <a href="../内部类/内部类.html">
+            
+                    
+                    内部类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../函数式编程/函数式编程.html">
+            
+                <a href="../函数式编程/函数式编程.html">
+            
+                    
+                    函数式编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >引用传递实际应用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5F15;&#x7528;&#x4F20;&#x9012;&#x5B9E;&#x9645;&#x5E94;&#x7528;">&#x5F15;&#x7528;&#x4F20;&#x9012;&#x5B9E;&#x9645;&#x5E94;&#x7528;</h1>
+<p>&#x5F15;&#x7528;&#x4F20;&#x9012;&#x662F;&#x6574;&#x4E2A;Java&#x5F00;&#x53D1;&#x4E0E;&#x8BBE;&#x8BA1;&#x8FC7;&#x7A0B;&#x4E2D;&#x6700;&#x4E3A;&#x91CD;&#x8981;&#x7684;&#x6280;&#x672F;&#x7EC4;&#x6210;&#xFF0C;&#x5BF9;&#x4E8E;&#x5F15;&#x7528;&#x4F20;&#x9012;&#x4E5F;&#x4E0E;&#x5B9E;&#x9645;&#x7684;&#x751F;&#x6D3B;&#x5BC6;&#x5207;&#x76F8;&#x5173;&#x3002;</p>
+<h2 id="&#x7C7B;&#x5173;&#x8054;&#x7ED3;&#x6784;"><strong>&#x7C7B;&#x5173;&#x8054;&#x7ED3;&#x6784;</strong></h2>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span></span>{
+    <span class="hljs-keyword">private</span> String name;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> price;
+    <span class="hljs-keyword">private</span> Person person;  <span class="hljs-comment">// &#x8F66;&#x5C5E;&#x4E8E;&#x4EBA;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Car</span><span class="hljs-params">(String name,<span class="hljs-keyword">double</span> price)</span></span>{
+        <span class="hljs-keyword">this</span>.name = name;
+        <span class="hljs-keyword">this</span>.price = price;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setPerson</span><span class="hljs-params">(Person person)</span></span>{
+        <span class="hljs-keyword">this</span>.person = person;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Person <span class="hljs-title">getPerson</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.person;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getInfo</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x6C7D;&#x8F66;&#x54C1;&#x724C;&#x578B;&#x53F7;&#xFF1A;&quot;</span>+<span class="hljs-keyword">this</span>.name + <span class="hljs-string">&quot;&#x3001;&#x6C7D;&#x8F66;&#x4EF7;&#x503C;&#xFF1A;&quot;</span>+<span class="hljs-keyword">this</span>.price;
+    }
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
+    <span class="hljs-keyword">private</span> String name;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> age;
+    <span class="hljs-keyword">private</span> Car car;  <span class="hljs-comment">// &#x4E00;&#x4E2A;&#x4EBA;&#x6709;&#x4E00;&#x8F86;&#x8F66;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">(String name,<span class="hljs-keyword">int</span> age)</span></span>{
+        <span class="hljs-keyword">this</span>.name = name;
+        <span class="hljs-keyword">this</span>.age = age;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setCar</span><span class="hljs-params">(Car car)</span></span>{
+        <span class="hljs-keyword">this</span>.car = car;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Car <span class="hljs-title">getCar</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.car;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getInfo</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x59D3;&#x540D;&#xFF1A;&quot;</span>+ <span class="hljs-keyword">this</span>.name + <span class="hljs-string">&quot;&#x3001;&#x5E74;&#x9F84;&#xFF1A;&quot;</span> + <span class="hljs-keyword">this</span>.age;
+    }
+    <span class="hljs-comment">// setter&#x3001;getter&#x7565;</span>
+}
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        <span class="hljs-comment">// &#x58F0;&#x660E;&#x5BF9;&#x8C61;&#x5E76;&#x4E14;&#x8BBE;&#x7F6E;&#x5F7C;&#x6B64;&#x7684;&#x5173;&#x7CFB;</span>
+        Person person = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&quot;&#x6797;&#x5F3A;&quot;</span>,<span class="hljs-number">29</span>);
+        Car car = <span class="hljs-keyword">new</span> Car(<span class="hljs-string">&quot;&#x5BBE;&#x5229;&quot;</span>,<span class="hljs-number">8000000</span>);
+        person.setCar(car);    <span class="hljs-comment">// &#x4E00;&#x4E2A;&#x4EBA;&#x6709;&#x4E00;&#x8F86;&#x8F66;</span>
+        car.setPerson(person);  <span class="hljs-comment">// &#x4E00;&#x8F86;&#x8F66;&#x5C5E;&#x4E8E;&#x4E00;&#x4E2A;&#x4EBA;</span>
+        <span class="hljs-comment">// &#x6839;&#x636E;&#x5173;&#x7CFB;&#x83B7;&#x53D6;&#x6570;&#x636E;</span>
+        System.out.println(person.getCar().getInfo());  <span class="hljs-comment">// &#x4EE3;&#x7801;&#x94FE;</span>
+        System.out.println(car.getPerson().getInfo());
+    }
+}
+</code></pre>
+<p>&#x672C;&#x6B21;&#x64CD;&#x4F5C;&#x7684;&#x4E24;&#x4E2A;&#x7C7B;&#x578B;&#xFF1A;Person&#x3001;Car&#x90FD;&#x662F;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#xFF0C;&#x4F46;&#x662F;Person&#x548C;Car&#x90FD;&#x53EF;&#x4EE5;&#x660E;&#x786E;&#x7684;&#x79D2;&#x8F93;&#x51FA;&#x67D0;&#x4E00;&#x7C7B;&#x7FA4;&#x4F53;&#xFF0C;&#x73B0;&#x5728;&#x662F;&#x9488;&#x5BF9;&#x7FA4;&#x4F53;&#x5173;&#x7CFB;&#x505A;&#x51FA;&#x7684;&#x4E00;&#x79CD;&#x8BBE;&#x7F6E;</p>
+<hr>
+<h2 id="&#x81EA;&#x8EAB;&#x5173;&#x8054;">&#x81EA;&#x8EAB;&#x5173;&#x8054;</h2>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span></span>{
+    <span class="hljs-keyword">private</span> String name;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> price;
+    <span class="hljs-keyword">private</span> Person person;  <span class="hljs-comment">// &#x8F66;&#x5C5E;&#x4E8E;&#x4EBA;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Car</span><span class="hljs-params">(String name,<span class="hljs-keyword">double</span> price)</span></span>{
+        <span class="hljs-keyword">this</span>.name = name;
+        <span class="hljs-keyword">this</span>.price = price;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setPerson</span><span class="hljs-params">(Person person)</span></span>{
+        <span class="hljs-keyword">this</span>.person = person;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Person <span class="hljs-title">getPerson</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.person;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getInfo</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x6C7D;&#x8F66;&#x54C1;&#x724C;&#x578B;&#x53F7;&#xFF1A;&quot;</span>+<span class="hljs-keyword">this</span>.name + <span class="hljs-string">&quot;&#x3001;&#x6C7D;&#x8F66;&#x4EF7;&#x503C;&#xFF1A;&quot;</span>+<span class="hljs-keyword">this</span>.price;
+    }
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{
+    <span class="hljs-keyword">private</span> String name;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> age;
+    <span class="hljs-keyword">private</span> Car car;  <span class="hljs-comment">// &#x4E00;&#x4E2A;&#x4EBA;&#x6709;&#x4E00;&#x8F86;&#x8F66;</span>
+    <span class="hljs-keyword">private</span> Person children[]; <span class="hljs-comment">// &#x4E00;&#x4E2A;&#x4EBA;&#x6709;&#x591A;&#x4E2A;&#x5B69;&#x5B50;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span><span class="hljs-params">(String name,<span class="hljs-keyword">int</span> age)</span></span>{
+        <span class="hljs-keyword">this</span>.name = name;
+        <span class="hljs-keyword">this</span>.age = age;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setChildren</span><span class="hljs-params">(Person children[])</span></span>{
+        <span class="hljs-keyword">this</span>.children =children;
+    }
+    <span class="hljs-keyword">public</span> Person[] getChildren(){
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.children;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setCar</span><span class="hljs-params">(Car car)</span></span>{
+        <span class="hljs-keyword">this</span>.car = car;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Car <span class="hljs-title">getCar</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.car;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getInfo</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x59D3;&#x540D;&#xFF1A;&quot;</span>+ <span class="hljs-keyword">this</span>.name + <span class="hljs-string">&quot;&#x3001;&#x5E74;&#x9F84;&#xFF1A;&quot;</span> + <span class="hljs-keyword">this</span>.age;
+    }
+    <span class="hljs-comment">// setter&#x3001;getter&#x7565;</span>
+}
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JavaDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        <span class="hljs-comment">// &#x58F0;&#x660E;&#x5BF9;&#x8C61;&#x5E76;&#x4E14;&#x8BBE;&#x7F6E;&#x5F7C;&#x6B64;&#x7684;&#x5173;&#x7CFB;</span>
+        Person person = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&quot;&#x822A;&#x822A;&quot;</span>,<span class="hljs-number">25</span>);
+        Person childA = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&quot;&#x6797;&#x5F3A;&quot;</span>,<span class="hljs-number">18</span>);
+        Person childB = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&quot;&#x5B81;&#x5B81;&quot;</span>,<span class="hljs-number">30</span>);
+        childA.setCar(<span class="hljs-keyword">new</span> Car(<span class="hljs-string">&quot;BMW&quot;</span>,<span class="hljs-number">300000</span>));
+        childB.setCar(<span class="hljs-keyword">new</span> Car(<span class="hljs-string">&quot;&#x6CD5;&#x62C9;&#x5229;&quot;</span>,<span class="hljs-number">1500000</span>));
+        person.setChildren(<span class="hljs-keyword">new</span> Person[] {childA,childB});
+        Car car = <span class="hljs-keyword">new</span> Car(<span class="hljs-string">&quot;&#x5BBE;&#x5229;&quot;</span>,<span class="hljs-number">8000000</span>);
+        person.setCar(car);    <span class="hljs-comment">// &#x4E00;&#x4E2A;&#x4EBA;&#x6709;&#x4E00;&#x8F86;&#x8F66;</span>
+        car.setPerson(person);  <span class="hljs-comment">// &#x4E00;&#x8F86;&#x8F66;&#x5C5E;&#x4E8E;&#x4E00;&#x4E2A;&#x4EBA;</span>
+        <span class="hljs-comment">// &#x6839;&#x636E;&#x5173;&#x7CFB;&#x83B7;&#x53D6;&#x6570;&#x636E;</span>
+        System.out.println(person.getCar().getInfo());  <span class="hljs-comment">// &#x4EE3;&#x7801;&#x94FE;</span>
+        System.out.println(car.getPerson().getInfo());
+        <span class="hljs-comment">// &#x6839;&#x636E;&#x4EBA;&#x627E;&#x5230;&#x6240;&#x6709;&#x7684;&#x5B69;&#x5B50;&#xFF0C;&#x4EE5;&#x53CA;&#x5B69;&#x5B50;&#x5BF9;&#x5E94;&#x7684;&#x6C7D;&#x8F66;</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>; x&lt; person.getChildren().length;x++){
+            System.out.println(person.getChildren()[x].getInfo());
+            System.out.println(person.getChildren()[x].getCar().getInfo());
+        }
+    }
+}
+</code></pre>
+<p>&#x8FD9;&#x4E9B;&#x5173;&#x7CFB;&#x7684;&#x5339;&#x914D;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x5173;&#x8054;&#x6765;&#x5B8C;&#x6210;&#x7684;</p>
+<hr>
+<h2 id="&#x5408;&#x6210;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;"><strong>&#x5408;&#x6210;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</strong></h2>
+<p>&#x5047;&#x5982;&#x73B0;&#x5728;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x79CD;&#x63CF;&#x8FF0;&#x7535;&#x8111;&#x7EC4;&#x6210;&#x7684;&#x7C7B;&#xFF0C;&#x90A3;&#x4E48;&#x5FC5;&#x987B;&#x8FDB;&#x884C;&#x62C6;&#x5206;&#xFF0C;&#x7535;&#x8111;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#xFF1A;&#x663E;&#x793A;&#x5668;&#x3001;&#x4E3B;&#x673A;&#xFF0C;&#x800C;&#x4E3B;&#x673A;&#x4E0A;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x786C;&#x4EF6;&#x3002;&#x8FD9;&#x79CD;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x62C6;&#x5206;&#xFF0C;&#x800C;&#x540E;&#x8FDB;&#x884C;&#x91CD;&#x65B0;&#x7EC4;&#x5408;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x8BBE;&#x8BA1;&#x5728;java&#x4E2D;&#x88AB;&#x79F0;&#x4E3A;&#x5408;&#x6210;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> &#x7535;&#x8111;</span>{
+    <span class="hljs-keyword">private</span> &#x663E;&#x793A;&#x5668; &#x5BF9;&#x8C61;&#x6570;&#x7EC4;[];
+    <span class="hljs-keyword">private</span> &#x4E3B;&#x673A; &#x5BF9;&#x8C61;;
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> &#x663E;&#x793A;&#x5668;</span>{}
+<span class="hljs-class"><span class="hljs-keyword">class</span> &#x4E3B;&#x673A;</span>{
+    <span class="hljs-keyword">private</span> &#x4E3B;&#x677F; &#x5BF9;&#x8C61;;
+    <span class="hljs-keyword">private</span> &#x9F20;&#x6807; &#x5BF9;&#x8C61;;
+    <span class="hljs-keyword">private</span> &#x952E;&#x76D8; &#x5BF9;&#x8C61;;
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> &#x4E3B;&#x677F;</span>{
+    <span class="hljs-keyword">private</span> &#x5185;&#x5B58; &#x5BF9;&#x8C61;&#x6570;&#x7EC4;[];
+    <span class="hljs-keyword">private</span> CPU &#x5BF9;&#x8C61;&#x6570;&#x7EC4;[];
+    <span class="hljs-keyword">private</span> &#x663E;&#x5361; &#x5BF9;&#x8C61;;
+    <span class="hljs-keyword">private</span> &#x786C;&#x76D8; &#x5BF9;&#x8C61;&#x6570;&#x7EC4;[];
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> &#x952E;&#x76D8;</span>{}
+<span class="hljs-class"><span class="hljs-keyword">class</span> &#x9F20;&#x6807;</span>{}
+<span class="hljs-class"><span class="hljs-keyword">class</span> &#x5185;&#x5B58;</span>{}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CPU</span></span>{}
+<span class="hljs-class"><span class="hljs-keyword">class</span> &#x663E;&#x5361;</span>{}
+<span class="hljs-class"><span class="hljs-keyword">class</span> &#x786C;&#x76D8;</span>{}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../数组的定义与使用/对象数组.html" class="navigation navigation-prev " aria-label="Previous page: 对象数组">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../数据表与简单java类映射转换/" class="navigation navigation-next " aria-label="Next page: 数据表与简单java类映射转换">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"引用传递实际应用","level":"1.8","depth":1,"next":{"title":"数据表与简单java类映射转换","level":"1.9","depth":1,"path":"数据表与简单java类映射转换/README.md","ref":"数据表与简单java类映射转换/README.md","articles":[{"title":"简单映射与复杂映射","level":"1.9.1","depth":2,"path":"数据表与简单java类映射转换/简单映射与复杂映射.md","ref":"数据表与简单java类映射转换/简单映射与复杂映射.md","articles":[]}]},"previous":{"title":"对象数组","level":"1.7.9","depth":2,"path":"数组的定义与使用/对象数组.md","ref":"数组的定义与使用/对象数组.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"引用传递实际应用/引用传递.md","mtime":"2021-06-07T13:00:30.699Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-08T12:44:37.371Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

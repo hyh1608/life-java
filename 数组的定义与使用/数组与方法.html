@@ -1,0 +1,1206 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数组与方法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="数组排序案例分析.html" />
+    
+    
+    <link rel="prev" href="二维数组.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../类与对象/类与对象的定义及使用.html">
+            
+                <a href="../类与对象/类与对象的定义及使用.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../类与对象/类与对象的定义及使用.html">
+            
+                <a href="../类与对象/类与对象的定义及使用.html">
+            
+                    
+                    类与对象的定义及使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../类与对象/对象内存分析.html">
+            
+                <a href="../类与对象/对象内存分析.html">
+            
+                    
+                    对象内存分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../类与对象/对象引用分析.html">
+            
+                <a href="../类与对象/对象引用分析.html">
+            
+                    
+                    对象引用分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../类与对象/引用与垃圾产生分析.html">
+            
+                <a href="../类与对象/引用与垃圾产生分析.html">
+            
+                    
+                    引用与垃圾产生分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../类与对象/深入分析类与对象.html">
+            
+                <a href="../类与对象/深入分析类与对象.html">
+            
+                    
+                    深入分析类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../this关键字/this调用本类属性.html">
+            
+                <a href="../this关键字/this调用本类属性.html">
+            
+                    
+                    this关键字
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../this关键字/this调用本类属性.html">
+            
+                <a href="../this关键字/this调用本类属性.html">
+            
+                    
+                    this调用本类属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../this关键字/this调用本类方法.html">
+            
+                <a href="../this关键字/this调用本类方法.html">
+            
+                    
+                    this调用本类方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../this关键字/综合案例：简单java类.html">
+            
+                <a href="../this关键字/综合案例：简单java类.html">
+            
+                    
+                    综合案例：简单java类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../static关键字/声明static属性.html">
+            
+                <a href="../static关键字/声明static属性.html">
+            
+                    
+                    static关键字
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../static关键字/声明static属性.html">
+            
+                <a href="../static关键字/声明static属性.html">
+            
+                    
+                    声明static属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../static关键字/声明static方法.html">
+            
+                <a href="../static关键字/声明static方法.html">
+            
+                    
+                    声明static方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../static关键字/static应用案例.html">
+            
+                <a href="../static关键字/static应用案例.html">
+            
+                    
+                    static应用案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../代码块/普通代码块.html">
+            
+                <a href="../代码块/普通代码块.html">
+            
+                    
+                    代码块
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../代码块/普通代码块.html">
+            
+                <a href="../代码块/普通代码块.html">
+            
+                    
+                    普通代码块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../代码块/构造代码块.html">
+            
+                <a href="../代码块/构造代码块.html">
+            
+                    
+                    构造代码块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../代码块/静态代码块.html">
+            
+                <a href="../代码块/静态代码块.html">
+            
+                    
+                    静态代码块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../面向对象案例分析/案例分析.html">
+            
+                <a href="../面向对象案例分析/案例分析.html">
+            
+                    
+                    面向对象案例分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    数组的定义与使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="数组引用传递分析.html">
+            
+                <a href="数组引用传递分析.html">
+            
+                    
+                    数组引用传递分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="foreach输出.html">
+            
+                <a href="foreach输出.html">
+            
+                    
+                    foreach输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="二维数组.html">
+            
+                <a href="二维数组.html">
+            
+                    
+                    二维数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.4" data-path="数组与方法.html">
+            
+                <a href="数组与方法.html">
+            
+                    
+                    数组与方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="数组排序案例分析.html">
+            
+                <a href="数组排序案例分析.html">
+            
+                    
+                    数组排序案例分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="数组转置案例分析.html">
+            
+                <a href="数组转置案例分析.html">
+            
+                    
+                    数组转置案例分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="数组相关类库.html">
+            
+                <a href="数组相关类库.html">
+            
+                    
+                    数组相关类库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="方法可变参数.html">
+            
+                <a href="方法可变参数.html">
+            
+                    
+                    方法可变参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="对象数组.html">
+            
+                <a href="对象数组.html">
+            
+                    
+                    对象数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../引用传递实际应用/引用传递.html">
+            
+                <a href="../引用传递实际应用/引用传递.html">
+            
+                    
+                    引用传递实际应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../数据表与简单java类映射转换/">
+            
+                <a href="../数据表与简单java类映射转换/">
+            
+                    
+                    数据表与简单java类映射转换
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../数据表与简单java类映射转换/简单映射与复杂映射.html">
+            
+                <a href="../数据表与简单java类映射转换/简单映射与复杂映射.html">
+            
+                    
+                    简单映射与复杂映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../String类/">
+            
+                <a href="../String类/">
+            
+                    
+                    String类
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../String类/String类特点分析.html">
+            
+                <a href="../String类/String类特点分析.html">
+            
+                    
+                    String类特点分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../String类/String类常用方法.html">
+            
+                <a href="../String类/String类常用方法.html">
+            
+                    
+                    String类常用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../继承与覆写/继承.html">
+            
+                <a href="../继承与覆写/继承.html">
+            
+                    
+                    继承与覆写
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../继承与覆写/继承.html">
+            
+                <a href="../继承与覆写/继承.html">
+            
+                    
+                    继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../继承与覆写/覆写.html">
+            
+                <a href="../继承与覆写/覆写.html">
+            
+                    
+                    覆写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../继承与覆写/继承分析.html">
+            
+                <a href="../继承与覆写/继承分析.html">
+            
+                    
+                    继承分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Annotation注解/常用注解介绍.html">
+            
+                <a href="../Annotation注解/常用注解介绍.html">
+            
+                    
+                    Annotation注解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../多态性/多态性.html">
+            
+                <a href="../多态性/多态性.html">
+            
+                    
+                    多态性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../Object类/Object类.html">
+            
+                <a href="../Object类/Object类.html">
+            
+                    
+                    Object类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../抽象类/抽象类.html">
+            
+                <a href="../抽象类/抽象类.html">
+            
+                    
+                    抽象类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../包装类/包装类.html">
+            
+                <a href="../包装类/包装类.html">
+            
+                    
+                    包装类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../接口/接口的定义与使用.html">
+            
+                <a href="../接口/接口的定义与使用.html">
+            
+                    
+                    接口
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../接口/接口的定义与使用.html">
+            
+                <a href="../接口/接口的定义与使用.html">
+            
+                    
+                    接口的定义与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../接口/工厂与代理设计模式.html">
+            
+                <a href="../接口/工厂与代理设计模式.html">
+            
+                    
+                    工厂与代理设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../接口/抽象类与接口应用.html">
+            
+                <a href="../接口/抽象类与接口应用.html">
+            
+                    
+                    抽象类与接口应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../泛型/泛型.html">
+            
+                <a href="../泛型/泛型.html">
+            
+                    
+                    泛型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../包的定义及使用/包的定义及导入.html">
+            
+                <a href="../包的定义及使用/包的定义及导入.html">
+            
+                    
+                    包的定义及使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="../包的定义及使用/包的定义及导入.html">
+            
+                <a href="../包的定义及使用/包的定义及导入.html">
+            
+                    
+                    包的定义及导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2" data-path="../包的定义及使用/包的使用.html">
+            
+                <a href="../包的定义及使用/包的使用.html">
+            
+                    
+                    包的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../单例与多例设计模式/单例与多例设计模式.html">
+            
+                <a href="../单例与多例设计模式/单例与多例设计模式.html">
+            
+                    
+                    单例与多例设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../枚举/枚举.html">
+            
+                <a href="../枚举/枚举.html">
+            
+                    
+                    枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../异常/异常处理.html">
+            
+                <a href="../异常/异常处理.html">
+            
+                    
+                    异常
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.22.1" data-path="../异常/异常处理.html">
+            
+                <a href="../异常/异常处理.html">
+            
+                    
+                    异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.2" data-path="../异常/异常关键字.html">
+            
+                <a href="../异常/异常关键字.html">
+            
+                    
+                    异常关键字
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../内部类/内部类.html">
+            
+                <a href="../内部类/内部类.html">
+            
+                    
+                    内部类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../函数式编程/函数式编程.html">
+            
+                <a href="../函数式编程/函数式编程.html">
+            
+                    
+                    函数式编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数组与方法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6570;&#x7EC4;&#x4E0E;&#x65B9;&#x6CD5;">&#x6570;&#x7EC4;&#x4E0E;&#x65B9;&#x6CD5;</h1>
+<p>&#x5BF9;&#x4E8E;&#x5F15;&#x7528;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x800C;&#x8A00;&#xFF0C;&#x4E3B;&#x8981;&#x7684;&#x7279;&#x70B9;&#x662F;&#x53EF;&#x4EE5;&#x4E0E;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x5F15;&#x7528;&#x4F20;&#x9012;&#xFF0C;&#x800C;&#x6570;&#x7EC4;&#x672C;&#x8EAB;&#x4E5F;&#x5C5E;&#x4E8E;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#xFF0C;&#x56E0;&#x6B64;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x5F15;&#x7528;&#x4F20;&#x9012;</p>
+<p><strong>&#x8303;&#x4F8B;&#xFF1A;</strong>&#x5B9E;&#x73B0;&#x6570;&#x7EC4;&#x7684;&#x5F15;&#x7528;&#x4F20;&#x9012;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        <span class="hljs-comment">// &#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x7684;&#x9759;&#x6001;&#x521D;&#x59CB;&#x5316;&#x5B9E;&#x73B0;&#x4E86;&#x6570;&#x7EC4;&#x7684;&#x5B9A;&#x4E49;</span>
+        <span class="hljs-keyword">int</span> data[] = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] {<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>};
+        printArray(data);  <span class="hljs-comment">//&#x4F20;&#x9012;&#x6570;&#x7EC4;</span>
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printArray</span><span class="hljs-params">(<span class="hljs-keyword">int</span> temp[])</span></span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>; x &lt; temp.length; x ++){
+            System.out.println(temp[x]);
+        }
+    }
+}
+</code></pre>
+<p>&#x5BF9;&#x4E8E;&#x6B64;&#x65F6;&#x7684;&#x5F15;&#x7528;&#x4F20;&#x9012;&#xFF0C;&#x5185;&#x5B58;&#x5173;&#x7CFB;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="&#x6570;&#x7EC4;&#x4E0E;&#x65B9;&#x6CD5;.assets/012.png" alt="012" style="zoom:50%;"></p>
+<p>&#x65E2;&#x7136;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x65B9;&#x6CD5;&#x63A5;&#x6536;&#x6570;&#x7EC4;&#xFF0C;&#x90A3;&#x4E48;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6570;&#x7EC4;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x90A3;&#x4E48;&#x6B64;&#x65F6;&#x53EA;&#x9700;&#x8981;&#x5728;&#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x4E0A;&#x8FDB;&#x884C;&#x63A7;&#x5236;&#x5373;&#x53EF;</p>
+<p><strong>&#x8303;&#x4F8B;</strong>&#xFF1A;&#x5B9A;&#x4E49;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x6570;&#x7EC4;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        <span class="hljs-comment">// &#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x7684;&#x9759;&#x6001;&#x521D;&#x59CB;&#x5316;&#x5B9E;&#x73B0;&#x4E86;&#x6570;&#x7EC4;&#x7684;&#x5B9A;&#x4E49;</span>
+        <span class="hljs-keyword">int</span> data[] = initArray(); <span class="hljs-comment">//&#x901A;&#x8FC7;&#x65B9;&#x6CD5;&#x83B7;&#x5F97;&#x6570;&#x7EC4;&#x5185;&#x5BB9;</span>
+        printArray(data);  <span class="hljs-comment">//&#x4F20;&#x9012;&#x6570;&#x7EC4;</span>
+    }
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span>[] initArray(){
+        <span class="hljs-keyword">int</span> arr[] = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] {<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>};
+        <span class="hljs-keyword">return</span> arr;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printArray</span><span class="hljs-params">(<span class="hljs-keyword">int</span> temp[])</span></span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>; x &lt; temp.length; x ++){
+            System.out.println(temp[x]);
+        }
+    }
+}
+</code></pre>
+<p>&#x6839;&#x636E;&#x4E0A;&#x8FF0;&#x7A0B;&#x5E8F;&#x8FDB;&#x884C;<strong>&#x5185;&#x5B58;&#x5206;&#x6790;</strong>&#xFF1A;</p>
+<p><img src="&#x6570;&#x7EC4;&#x4E0E;&#x65B9;&#x6CD5;.assets/013.png" alt="013" style="zoom: 33%;"></p>
+<p><strong>&#x8303;&#x4F8B;&#xFF1A;</strong>&#x901A;&#x8FC7;&#x65B9;&#x6CD5;&#x4FEE;&#x6539;&#x6570;&#x7EC4;&#x5185;&#x5BB9;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        <span class="hljs-comment">// &#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x7684;&#x9759;&#x6001;&#x521D;&#x59CB;&#x5316;&#x5B9E;&#x73B0;&#x4E86;&#x6570;&#x7EC4;&#x7684;&#x5B9A;&#x4E49;</span>
+        <span class="hljs-keyword">int</span> data[] = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] {<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>};
+        changeArray(data); <span class="hljs-comment">// &#x4FEE;&#x6539;&#x6570;&#x7EC4;&#x5185;&#x5BB9;</span>
+        printArray(data);  <span class="hljs-comment">//&#x4F20;&#x9012;&#x6570;&#x7EC4;</span>
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">changeArray</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[])</span></span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>; x &lt; arr.length; x ++){
+            arr[x] *= <span class="hljs-number">2</span>;   <span class="hljs-comment">// &#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5185;&#x5BB9;&#x4E58;2&#x4FDD;&#x5B58;</span>
+        }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printArray</span><span class="hljs-params">(<span class="hljs-keyword">int</span> temp[])</span></span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>; x &lt; temp.length; x ++){
+            System.out.println(temp[x]);
+        }
+    }
+}
+</code></pre>
+<p>&#x6839;&#x636E;&#x4E0A;&#x8FF0;&#x7A0B;&#x5E8F;&#x8FDB;&#x884C;<strong>&#x5185;&#x5B58;&#x5206;&#x6790;</strong>&#xFF1A;</p>
+<p><img src="&#x6570;&#x7EC4;&#x4E0E;&#x65B9;&#x6CD5;.assets/014.png" alt="014" style="zoom: 33%;"></p>
+<p>&#x6848;&#x4F8B;&#xFF1A;&#x968F;&#x610F;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;int&#x6570;&#x7EC4;&#xFF0C;&#x8981;&#x6C42;&#x53EF;&#x4EE5;&#x8BA1;&#x7B97;&#x51FA;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;&#x603B;&#x548C;&#x3001;&#x6700;&#x5927;&#x503C;&#x3001;&#x6700;&#x5C0F;&#x503C;&#x3001;&#x4EE5;&#x53CA;&#x5E73;&#x5747;&#x503C;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        <span class="hljs-comment">// &#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x7684;&#x9759;&#x6001;&#x521D;&#x59CB;&#x5316;&#x5B9E;&#x73B0;&#x4E86;&#x6570;&#x7EC4;&#x7684;&#x5B9A;&#x4E49;</span>
+        <span class="hljs-keyword">int</span> data[] = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] {<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>};
+        <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">double</span> avg = <span class="hljs-number">0.0</span>;
+        <span class="hljs-keyword">int</span> max = data[<span class="hljs-number">0</span>]; <span class="hljs-comment">// &#x5047;&#x8BBE;&#x7B2C;&#x4E00;&#x4E2A;&#x662F;&#x6700;&#x5927;&#x503C;</span>
+        <span class="hljs-keyword">int</span> min = data[<span class="hljs-number">0</span>]; <span class="hljs-comment">// &#x5047;&#x8BBE;&#x7B2C;&#x4E00;&#x4E2A;&#x662F;&#x6700;&#x5C0F;&#x503C;</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>; x &lt; data.length; x++){
+            <span class="hljs-keyword">if</span> (data[x] &gt; max){
+                max = data[x];
+            }
+            <span class="hljs-keyword">if</span> (data[x] &lt; min){
+                min = data[x];
+            }
+            sum += data[x];
+        }
+        avg = sum / data.length;
+        System.out.println(<span class="hljs-string">&quot;&#x6570;&#x7EC4;&#x603B;&#x548C;&#xFF1A;&quot;</span>+sum);
+        System.out.println(<span class="hljs-string">&quot;&#x6570;&#x7EC4;&#x5E73;&#x5747;&#x503C;&#xFF1A;&quot;</span>+avg);
+        System.out.println(<span class="hljs-string">&quot;&#x6570;&#x7EC4;&#x6700;&#x5927;&#x503C;&#xFF1A;&quot;</span>+max);
+        System.out.println(<span class="hljs-string">&quot;&#x6570;&#x7EC4;&#x6700;&#x5C0F;&#x503C;&#xFF1A;&quot;</span>+min);
+        printArray(data);  <span class="hljs-comment">//&#x4F20;&#x9012;&#x6570;&#x7EC4;</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printArray</span><span class="hljs-params">(<span class="hljs-keyword">int</span> temp[])</span></span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>; x &lt; temp.length; x ++){
+            System.out.println(temp[x]);
+        }
+    }
+}
+</code></pre>
+<p>&#x4E3B;&#x65B9;&#x6CD5;&#x6240;&#x5728;&#x7684;&#x7C7B;&#x4E3A;&#x4E3B;&#x7C7B;&#xFF0C;&#x4E3B;&#x7C7B;&#x4E0D;&#x5E0C;&#x671B;&#x6D89;&#x53CA;&#x5230;&#x8FC7;&#x4E8E;&#x590D;&#x6742;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x5728;&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E3B;&#x65B9;&#x6CD5;&#x672C;&#x8EAB;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x800C;&#x5BF9;&#x4E8E;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x4EE3;&#x7801;&#x5E94;&#x8BE5;&#x5C3D;&#x91CF;&#x7B80;&#x5355;&#x4E00;&#x4E9B;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x6700;&#x597D;&#x7684;&#x505A;&#x6CD5;&#x662F;&#x5C06;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x8BA1;&#x7B97;&#x4EA4;&#x7ED9;&#x5355;&#x72EC;&#x7684;&#x7A0B;&#x5E8F;&#x7C7B;&#x53BB;&#x5B8C;&#x6210;</p>
+<p><strong>&#x8303;&#x4F8B;&#xFF1A;</strong>&#x6539;&#x5584;&#x64CD;&#x4F5C;&#x8BBE;&#x8BA1;</p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayUtil</span></span>{<span class="hljs-comment">// &#x662F;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x5DE5;&#x5177;&#x7C7B;</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> sum;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> avg;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> max;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> min;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ArrayUtil</span><span class="hljs-params">(<span class="hljs-keyword">int</span> data[])</span></span>{
+        <span class="hljs-keyword">this</span>.max = data[<span class="hljs-number">0</span>]; <span class="hljs-comment">// &#x5047;&#x8BBE;&#x7B2C;&#x4E00;&#x4E2A;&#x662F;&#x6700;&#x5927;&#x503C;</span>
+        <span class="hljs-keyword">this</span>.min = data[<span class="hljs-number">0</span>]; <span class="hljs-comment">// &#x5047;&#x8BBE;&#x7B2C;&#x4E00;&#x4E2A;&#x662F;&#x6700;&#x5C0F;&#x503C;</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> x = <span class="hljs-number">0</span>; x &lt; data.length; x++){
+            <span class="hljs-keyword">if</span> (data[x] &gt; <span class="hljs-keyword">this</span>.max){
+                <span class="hljs-keyword">this</span>.max = data[x];
+            }
+            <span class="hljs-keyword">if</span> (data[x] &lt; min){
+                <span class="hljs-keyword">this</span>.min = data[x];
+            }
+            <span class="hljs-keyword">this</span>.sum += data[x];
+        }
+        <span class="hljs-keyword">this</span>.avg = <span class="hljs-keyword">this</span>.sum / data.length;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getSum</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.sum;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getAvg</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.avg;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getMax</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.max;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getMin</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.min;
+    }
+}
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArrayDemo</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        <span class="hljs-comment">// &#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x7684;&#x9759;&#x6001;&#x521D;&#x59CB;&#x5316;&#x5B9E;&#x73B0;&#x4E86;&#x6570;&#x7EC4;&#x7684;&#x5B9A;&#x4E49;</span>
+        <span class="hljs-keyword">int</span> data[] = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] {<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>};
+        ArrayUtil util = <span class="hljs-keyword">new</span> ArrayUtil(data);
+        System.out.println(<span class="hljs-string">&quot;&#x6570;&#x7EC4;&#x603B;&#x548C;&#xFF1A;&quot;</span>+util.getSum());
+        System.out.println(<span class="hljs-string">&quot;&#x6570;&#x7EC4;&#x5E73;&#x5747;&#x503C;&#xFF1A;&quot;</span>+util.getAvg());
+        System.out.println(<span class="hljs-string">&quot;&#x6570;&#x7EC4;&#x6700;&#x5927;&#x503C;&#xFF1A;&quot;</span>+util.getMax());
+        System.out.println(<span class="hljs-string">&quot;&#x6570;&#x7EC4;&#x6700;&#x5C0F;&#x503C;&#xFF1A;&quot;</span>+util.getMin());
+    }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="二维数组.html" class="navigation navigation-prev " aria-label="Previous page: 二维数组">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="数组排序案例分析.html" class="navigation navigation-next " aria-label="Next page: 数组排序案例分析">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数组与方法","level":"1.7.4","depth":2,"next":{"title":"数组排序案例分析","level":"1.7.5","depth":2,"path":"数组的定义与使用/数组排序案例分析.md","ref":"数组的定义与使用/数组排序案例分析.md","articles":[]},"previous":{"title":"二维数组","level":"1.7.3","depth":2,"path":"数组的定义与使用/二维数组.md","ref":"数组的定义与使用/二维数组.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"数组的定义与使用/数组与方法.md","mtime":"2021-06-08T10:20:23.889Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-08T12:44:37.371Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
